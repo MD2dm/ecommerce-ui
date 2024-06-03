@@ -1,31 +1,66 @@
 @media screen and (max-width: 768px) {
-    body {
-      font-size: 14px;
-    }
-    .title-login{
-      margin-left: 70px;
-      font-size: 30px;
-      transform: translateY(90px);
-      display: block;
-    }
-    .container-login{
-        width: 100vw;
-        height: 450px;;
-        margin-top: 180px;
-        .logo{
-          .key{
-            .key-primary{
-              font-size: 60px;
-            }
-          }
-          .text{
-            font-size: 25px;
-          }
+  body {
+    font-size: 14px;
+    width: 100vw;
+    height: 100vh;
+  }
+  .title-login {
+    margin-left: 50px;
+    font-size: 30px;
+    transform: translateY(90px);
+    display: block;
+  }
+  .container-login {
+    width: 100vw;
+    height: 450px;
+    margin-top: 180px;
+    .logo {
+      .key {
+        .key-primary {
+          font-size: 60px;
         }
-        .input{
-          label{
-            transform: translateX(-120px);
-          }
-        }
+      }
+      .text {
+        font-size: 25px;
+      }
+    }
+    .input {
+      label {
+        transform: translateX(-130px);
+      }
+      button {
+        margin-top: 10px;
+      }
+      .checkshow {
+        margin-left: 120px;
+        margin-top: 30px;
+      }
     }
   }
+  .navbar {
+    width: 100vw;
+  }
+  .header {
+    width: 100vw;
+    height: 60px;
+    .container {
+      .icon {
+        transform: translateX(35px) translateY(-5px);
+      }
+      .search {
+        display: none;
+      }
+    }
+  }
+  .mobile-navbar {
+    width: 100vw;
+    height: 60px;
+    background-color: #394449;
+    display: block;
+  }
+  .list-users{
+    column-gap: 10px;
+    transform: translateX(-30px) translateY(-80px);
+
+  }
+}

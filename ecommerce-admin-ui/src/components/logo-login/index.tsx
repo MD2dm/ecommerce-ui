@@ -3,7 +3,7 @@ import { FaKey } from "react-icons/fa";
 const LogoLogin = () => {
   return (
     <>
-      <div className="key p-5 translate-x-[50px]">
+      <div className="key p-5 translate-x-[60px]">
         <svg width="0" height="0">
           <defs>
             <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
