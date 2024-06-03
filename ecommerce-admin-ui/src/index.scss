@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Poppins", sans-serif;
+    width: 100vw;
+    background-color: #222d32;
+    color: white;
+  }
+  @layer Css {
+    .icon-gradient {
+      background: linear-gradient(to right, #27ef9f, #0db8de);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .form-text-label {
+      font-size: 12px;
+      color: #6C6C6C;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+    .btn-outline-primary:hover {
+      background-color: #0DB8DE;
+      right: 0px;
+    }
+  }
+}

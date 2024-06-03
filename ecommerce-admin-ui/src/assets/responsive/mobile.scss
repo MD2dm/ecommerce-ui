@@ -1,0 +1,31 @@
+@media screen and (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+    .title-login{
+      margin-left: 70px;
+      font-size: 30px;
+      transform: translateY(90px);
+      display: block;
+    }
+    .container-login{
+        width: 100vw;
+        height: 450px;;
+        margin-top: 180px;
+        .logo{
+          .key{
+            .key-primary{
+              font-size: 60px;
+            }
+          }
+          .text{
+            font-size: 25px;
+          }
+        }
+        .input{
+          label{
+            transform: translateX(-120px);
+          }
+        }
+    }
+  }
