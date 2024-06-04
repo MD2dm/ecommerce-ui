@@ -23,7 +23,7 @@ const Navbar = () => {
       console.log("Logout successful:", response);
       localStorage.removeItem("token");
       localStorage.removeItem("accessToken");
-      navigate("/admin/login");
+      navigate("/auth/admin/login");
     } catch (error) {
       console.error("Failed to logout:", error);
     }

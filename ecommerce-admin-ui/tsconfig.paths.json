@@ -10,6 +10,8 @@
         "@assets/*": ["assets/*"],
         "@components": ["components"],
         "@components/*": ["components/*"], 
+        "@hooks": ["hooks"],
+        "@hooks/*": ["hooks/*"], 
         "@interfaces": ["interfaces"], 
         "@interfaces/*": ["interfaces/*"],
         "@layoutStore": ["layouts"], 

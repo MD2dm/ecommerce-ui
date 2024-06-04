@@ -3,25 +3,33 @@ import "@assets/responsive/mobile.scss";
 import Button from "@components/button";
 import InputText from "@components/inputText";
 import LogoLogin from "@components/logo-login";
+import useAuth from "@hooks/useAuth";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const { handleSubmit, register } = useForm();
   const navigate = useNavigate();
+  const { updateAuthState } = useAuth();
 
   const onSubmit = async (data: any) => {
     try {
-      await loginAdmin(data.username, data.password);
-      navigate('/admin/home');
+      const responseData = await loginAdmin(data.username, data.password);
+      const { token } = responseData.data;
+      console.log("token from login", token);
+      console.log("test", updateAuthState(token));
+      updateAuthState(token);
+      console.log("login successful");
+      navigate("/admin/dashboard", { replace: true });
     } catch (error) {
-      console.error('Failed to login:', error);
+      console.error("Failed to login:", error);
     }
-
   };
   return (
     <>
-      <div className="title-login hidden icon-gradient font-bold tracking-wider">Welcome to ADMIN</div>
+      <div className="title-login hidden icon-gradient font-bold tracking-wider">
+        Welcome to ADMIN
+      </div>
       <div className="container-login tablet w-[30%] h-[480px] bg-[#1A2226] mx-auto mt-[12%] flex items-center flex-col">
         <div className="logo mb-10">
           <LogoLogin></LogoLogin>
@@ -30,7 +38,10 @@ const LoginPage = () => {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="input w-full text-center">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="input w-full text-center"
+        >
           <InputText
             title="USERNAME"
             type="text"

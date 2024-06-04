@@ -10,11 +10,12 @@ export const loginAdmin = async (username: string, password: string) => {
       username,
       password,
     });
-    const { token, accessToken } = response.data.data.token;
+    const { token, refreshToken } = response.data.data;
 
     localStorage.setItem("token", token);
-    localStorage.setItem("accessToken", accessToken);
-
+    localStorage.setItem("refreshToken", refreshToken);
+    console.log("Bearer",token)
+    console.log("Bearer",refreshToken)
     return response.data;
   } catch (error) {
     throw new Error("Failed to login");

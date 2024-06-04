@@ -26,5 +26,25 @@
       background-color: #0db8de;
       right: 0px;
     }
+
+    .column-table {
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+      word-wrap: break-word;
+      margin-right: 10px;
+      width: 20px;
+    }
+
+    .header-column {
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+      font-weight: bold;
+      padding: 8px;
+      text-align: center;
+    }
   }
 }
